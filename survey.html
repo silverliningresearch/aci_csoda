@@ -58,16 +58,16 @@
           const listSearchHandler = () => {
             console.log("Current Page Index: ", api.fn.getCurrentPageIndex() );
             
-            switch (api.fn.getCurrentPageIndex()) {
-              case 3:
-                show_flight_search_box("Core_Q2"); //flight
-                break;
+            // switch (api.fn.getCurrentPageIndex()) {
+            //   case 2:
+            //     show_flight_search_box("FLIGHT_NUMBER"); //flight
+            //     break;
              
 
-              default:
-                aui_hide_external_search_box();
-                break;
-            }
+            //   default:
+            //     aui_hide_external_search_box();
+            //     break;
+            // }
           }    
           api.events.subscribe('next', listSearchHandler);
           api.events.subscribe('back', listSearchHandler);

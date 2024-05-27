@@ -132,23 +132,11 @@ function selected_handler(val) {
   console.log('currentSearchQuestion: ', currentSearchQuestion);
 
   switch (currentSearchQuestion) {
-    case "Core_Q2": //Flight number
+    case "FLIGHT_NUMBER": //Flight number
       save_flight_value(currentSearchQuestion, val);
       $('.rt-btn.rt-btn-next').show(); 
       break;  
 
-    case "Core_Q6_2": //From Airport
-      save_airport_value(currentSearchQuestion, val);
-      $('.rt-btn.rt-btn-next').show(); 
-      break;  
-
-    case "Core_Q6_3": //Postal code
-    case "Core_Q6_4": //Postal code    
-    case "Core_Q7_2": //Postal code    
-    case "Core_Q14": //Postal code    
-      //save_postal_code_value(currentSearchQuestion, val);
-      $('.rt-btn.rt-btn-next').show(); 
-      break;  
 
     default:
       break;         
