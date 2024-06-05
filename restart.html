@@ -6,7 +6,28 @@
   <script>
     console.log("restart interview");
     localStorage.clear();
+
     let url = "https://silverliningresearch.github.io/aci_csoda/survey";
+
+
+    const queryString = window.location.search;
+    const urlParams = new URLSearchParams(queryString);
+    const urlVar01 = urlParams.get('urlVar01');
+
+    console.log("urlVar01: ", urlVar01);
+
+    //Rome
+    if ( (urlVar01) && (urlVar01==1)) url =  "https://silverliningresearch.github.io/aci_csoda/fco_survey";
+
+    //Berlin
+    if ( (urlVar01) && (urlVar01==2)) url =  "https://silverliningresearch.github.io/aci_csoda/ber_survey";
+
+    //Vienna
+    if ( (urlVar01) && (urlVar01==3)) url =  "https://silverliningresearch.github.io/aci_csoda/survey";
+
+    //Brussels
+    if ( (urlVar01) && (urlVar01==4)) url =  "https://silverliningresearch.github.io/aci_csoda/bru_survey";
+ 
     window.location.href = url;
 </script>
 
