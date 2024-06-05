@@ -38,17 +38,6 @@
     <script src="https://survalyzer.survalyzer.eu/assets/survalyzer-survey.js"></script>
 
 
-    <script type="text/javascript" src="https://silverliningresearch.github.io/VIE_ADV/data/VIE_departures_flight_list.js"></script> 
-    <script src="data/airport_list.js"></script>
-    <script src="data/postal_Code_Germany.js"></script>
-    <script src="data/postal_Code_Austria.js"></script>
-
-    <script src="scripts/flight_search.js"></script>
-    <script src="scripts/airport_search.js"></script>
-    <script src="scripts/postal_code_search.js"></script>
-
-    <script src="scripts/auto_complete_ui.js"></script>
-
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/smoothness/jquery-ui.css">
     <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
 
@@ -56,18 +45,10 @@
         window.addEventListener('load', function () {
         setTimeout(() => {
           const listSearchHandler = () => {
-            console.log("Current Page Index: ", api.fn.getCurrentPageIndex() );
-            
-            // switch (api.fn.getCurrentPageIndex()) {
-            //   case 2:
-            //     show_flight_search_box("FLIGHT_NUMBER"); //flight
-            //     break;
-             
+            //console.log("Current Page Index: ", api.fn.getCurrentPageIndex() );
 
-            //   default:
-            //     aui_hide_external_search_box();
-            //     break;
-            // }
+            api.fn.answers({Airport: 3}); //Vienna
+  
           }    
           api.events.subscribe('next', listSearchHandler);
           api.events.subscribe('back', listSearchHandler);
