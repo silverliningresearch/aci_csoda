@@ -48,8 +48,7 @@
             //console.log("Current Page Index: ", api.fn.getCurrentPageIndex() );
             if (api.fn.getCurrentPageIndex() === 0) 
             { 
-              api.fn.answers({pre_selected_airport: 3}); //Vienna
-              api.fn.answers({Aiport: 3}); //Vienna
+              api.fn.answers({pre_selected_airport: 0}); //no preselect            
             }
           }    
           api.events.subscribe('next', listSearchHandler);
