@@ -48,10 +48,15 @@
             //console.log("Current Page Index: ", api.fn.getCurrentPageIndex() );
             if (api.fn.getCurrentPageIndex() === 0) 
             { 
+              api.fn.answers({pre_selected_airport: 0}); //No specific airport
+
+              const queryString = window.location.search;
               const urlParams = new URLSearchParams(queryString);
-              const urlVar01 = urlParams.get('urlVar01');
-             
-              if ( (urlVar01) && (urlVar01==3))  api.fn.answers({Airport: 3}); //Vienna
+
+              if (urlParams) {
+                const urlVar01 = urlParams.get('urlVar01');
+                if ( (urlVar01) && (urlVar01==3))  api.fn.answers({pre_selected_airport: 3}); //Vienna
+              }
             }
           }    
           api.events.subscribe('next', listSearchHandler);
