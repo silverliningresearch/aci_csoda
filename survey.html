@@ -48,7 +48,10 @@
             //console.log("Current Page Index: ", api.fn.getCurrentPageIndex() );
             if (api.fn.getCurrentPageIndex() === 0) 
             { 
-              api.fn.answers({Airport: 3}); //Vienna
+              const urlParams = new URLSearchParams(queryString);
+              const urlVar01 = urlParams.get('urlVar01');
+             
+              if ( (urlVar01) && (urlVar01==3))  api.fn.answers({Airport: 3}); //Vienna
             }
           }    
           api.events.subscribe('next', listSearchHandler);
