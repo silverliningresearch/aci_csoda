@@ -49,6 +49,7 @@
             if (api.fn.getCurrentPageIndex() === 0) 
             { 
               api.fn.answers({pre_selected_airport: 1}); //Rome
+              api.fn.answers({Airport: 1}); //Rome
             }
           }    
           api.events.subscribe('next', listSearchHandler);
