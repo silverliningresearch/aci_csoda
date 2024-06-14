@@ -46,10 +46,9 @@
         setTimeout(() => {
           const listSearchHandler = () => {
             //console.log("Current Page Index: ", api.fn.getCurrentPageIndex() );
-            if (api.fn.getCurrentPageIndex() === 0) 
+            //if (api.fn.getCurrentPageIndex() === 0) 
             { 
               api.fn.answers({pre_selected_airport: 2}); //Berlin
-              api.fn.answers({Airport: 2}); //Berlin
             }
           }    
           api.events.subscribe('next', listSearchHandler);
